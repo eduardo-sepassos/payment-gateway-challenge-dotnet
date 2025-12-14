@@ -1,11 +1,11 @@
 ﻿using PaymentGateway.Api.Models.Responses;
 
-namespace PaymentGateway.Api.Services;
+namespace PaymentGateway.Api.Services.Repositories;
 
 public class PaymentsRepository
 {
     public List<PostPaymentResponse> Payments = new();
-    
+
     public void Add(PostPaymentResponse payment)
     {
         Payments.Add(payment);

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,7 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup>       <PackageReference Include="FluentResults" Version="4.0.0" />       <PackageReference Include="FluentValidation" Version="12.1.1" />       <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.1" />   
+
+    <PackageReference Include="RestEase.HttpClientFactory" Version="1.6.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
