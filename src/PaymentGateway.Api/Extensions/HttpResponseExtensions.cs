@@ -12,6 +12,9 @@ public static class HttpResponseExtensions
             return Result.Ok(response.GetContent());
         }
 
-        return Result.Fail($"{response.ResponseMessage.StatusCode} response received from acquirer");
+        var statusCode = response.ResponseMessage.StatusCode;
+
+        return Result.Fail(new Error($"{statusCode} response received from acquirer")
+            .WithMetadata("HttpStatusCode", (int)statusCode));
     }
 }
